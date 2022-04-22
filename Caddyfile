@@ -1,0 +1,11 @@
+localhost
+
+bind 127.0.0.1 ::1
+
+root ./static
+file_server browse
+
+encode zstd gzip
+
+reverse_proxy /sse1 127.0.0.1:6001
+reverse_proxy /sse1 127.0.0.1:6002
